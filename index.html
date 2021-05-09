@@ -6,10 +6,11 @@
         <!-- <script type="text/javascript" src="js/main.js"></script> -->
         <!-- <script type="text/javascript" src="js/second.js"></script> -->
         <!-- <script type="text/javascript" src="js/threeth.js"></script> -->
-        <script type="text/javascript" src="js/fourth.js"></script>
+        <!-- <script type="text/javascript" src="js/fourth.js"></script> -->
+        <script type="text/javascript" src="js/fifth.js"></script>
     </head>
     
-    <body>
+    <body onload="load()">   <!--Chama uma function com ajuda do js-->
         <!-- Não estamos utilizando (parte em verde)
        <script>
            alert("Meu 1º JavaScript no HTML")
@@ -17,5 +18,17 @@
        -->
        
        <h1>Minha Página</h1>
+
+       <button type="button" onclick="clicou()">Clique aqui!</button>
+       <!-- <h3 id="agradecimento"></h3> -->  <!--Já é escrito com negrito-->
+       <p id="agradecimento" onclick="redirecionar()"></p>  <!--Não é escrito com negrito no js, tem que usar a tag b para deixar em negrito-->
+       <p id="mousemove" onmouseover="trocar()" onmouseout="voltar()">Passe o mouse aqui!</p> 
+       <p id="mousemove2" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p> <!--  Para mudar esse usamos o "this" e no js o elemento. Eu estou passando eu mesmo o elemento para essa função. Não irá precisar do document.getElementById, pois usa o elemento.innerHTML no js. Sendo assim, não é obrigado a usar o id --> 
+    
+       <select onchange="funcaoChange(this)"> <!--Quando uma pessoa muda um valor, ele consegue coletar o valor que a pessoa está mudando-->
+           <option value="1">Valor 1</option>
+           <option value="2">Valor 2</option>
+           <option value="3">Valor 3</option>
+       </select>
     </body>
 </html>

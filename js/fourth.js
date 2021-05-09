@@ -17,8 +17,9 @@ alert(setReplace("Vai Japão!", "Japão", "Brasil"));
 
 //Exemplo 3
 
+//var validar // pode usar esse aqui que é global (vale para mais que uma função) ou pode usar o var que está dentro da function validaIdade
 function validaIdade (idade){
-    var validar;
+    var validar; // Esse var validar é local
     if(idade >= 18){
     validar = true
     }else{
